@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="number"></h1>
+
+
+  <script>
+    let randomNumber = Math.floor(Math.random() * 100);
+
+    if(randomNumber%2==0){
+      let resut=randomNumber;
+      document.querySelector('#number').innerText=`the number is Even Number ${resut}`
+    }else{
+      let resut=randomNumber;
+      document.querySelector('#number').innerText=`the number is odd Number ${resut}`
+    }
+  </script>
+</body>
+</html>
