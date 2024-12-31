@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Myntra Bag</title>
+  <link rel="stylesheet" href="CSS/BagButton.css">
+</head>
+<body>
+  <button id="click_me" onclick="cartQuantities += 1; document.querySelector('#cart_summary').innerText = `Your bag has ${cartQuantities} items`; ">Add to Cart</button>
+  <button id="WishList" onclick="cartQuantities=cartQuantities -1; document.querySelector('#cart_summary').innerText =`your bag has ${cartQuantities} items`;" >Move to Wish List</button>
+
+  <button id="click_me_sale" onclick="cartQuantities += 2; document.querySelector('#cart_summary').innerText = `Your bag has ${cartQuantities} items`; ">Add to sale 1+1</button>
+  
+  <h1 id="cart_summary"></h1>
+
+  <script>
+    let cartQuantities = 0;
+
+    
+    document.querySelector('#cart_summary').innerText = `Your bag has ${cartQuantities} items`;
+  </script>
+</body>
+</html>
+<!-- The 'click_me_sale' ID is used for the "Add to 1=1 Sale Item" button. If this functionality encounters issues, it may be updated or replaced as per software requirements. -->

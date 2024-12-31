@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushvant Jadhao - Personal Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background: #6c757d;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 4em 2em;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1500x500/?technology,coding') no-repeat center center/cover;
+            color: white;
+            padding: 6em 0;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 4em;
+            font-weight: 700;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2em auto;
+            background: #ffffff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 1em;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            color: white;
+            padding: 0.75em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #8f94fb, #4e54c8);
+        }
+
+        .skills {
+            margin: 2em 0;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin: 0.5em 0;
+            padding: 0.75em;
+            font-size: 1.1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .animated-banner {
+            display: block;
+            width: 100%;
+            max-height: 300px;
+            margin-bottom: 2em;
+            object-fit: cover;
+        }
+
+        .hero-image {
+            margin: 2em 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Khushvant Jadhao</h1>
+    <p>Software Engineer | MCA Student | AI Enthusiast</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="hero">
+        <h1>Welcome to My Professional Website</h1>
+        <p>Your one-stop destination to know all about me.</p>
+    </div>
+    <h2>About Me</h2>
+    <p>Hello! I am Khushvant Jadhao, a passionate software engineer specializing in Java and AI, currently pursuing my MCA from Chandigarh University. Welcome to my world of coding, creativity, and problem-solving!</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+        <li><strong>Grocery Management System:</strong> A Java Spring-based project developed during my internship at Cognition Tech.</li>
+        <li><strong>GitHub Repository:</strong> <a href="https://github.com/khushvant-jadhao/java-stream-operations" target="_blank">Java Stream Operations</a></li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <ul>
+            <li>Java Development</li>
+            <li>Spring Framework</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Artificial Intelligence</li>
+            <li>Problem Solving</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <form onsubmit="return submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Khushvant Jadhao. All rights reserved.</p>
+</footer>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        alert(`Thank you, ${name}! Your message has been sent successfully.`);
+        document.querySelector('form').reset();
+    }
+
+    function showCurrentYear() {
+        const footer = document.querySelector('footer p');
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${currentYear} Khushvant Jadhao. All rights reserved.`;
+    }
+
+    showCurrentYear();
+</script>
+
+</body>
+</html>

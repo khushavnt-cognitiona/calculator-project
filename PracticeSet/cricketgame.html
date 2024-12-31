@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="CSS/Cricket.css">
+</head>
+<body>
+  <button id="Four">Four</button>
+  <button id="Six">Six</button>
+  <button id="Wicket">Wicket</button>
+  <button id="Score">Show Score</button>
+
+  <h1 id="game_summary">Score: 0 | Wickets: 0</h1>
+
+  <script>
+    let score = 0; // Keeps track of the score
+    let wickets = 0; // Keeps track of the wickets
+    const maxWickets = 10; // Maximum number of wickets
+
+    // Function to update the game summary
+    function updateGameSummary() {
+      if (wickets >= maxWickets) {
+        document.querySelector('#game_summary').innerText = `Innings Over: Final Score: ${score} | Wickets: ${wickets}`;
+      } else {
+        document.querySelector('#game_summary').innerText = `Score: ${score} | Wickets: ${wickets}`;
+      }
+    }
+
+    // Function for the "Four" button
+    function hitFour() {
+      if (wickets < maxWickets) {
+        score += 4;
+        updateGameSummary();
+      } else {
+        alert("Innings Over! No further runs can be scored.");
+      }
+    }
+
+    // Function for the "Six" button
+    function hitSix() {
+      if (wickets < maxWickets) {
+        score += 6;
+        updateGameSummary();
+      } else {
+        alert("Innings Over! No further runs can be scored.");
+      }
+    }
+
+    // Function for the "Wicket" button
+    function takeWicket() {
+      if (wickets < maxWickets) {
+        wickets += 1;
+        updateGameSummary();
+      } else {
+        alert("Innings Over! No further wickets can be taken.");
+      }
+    }
+
+    // Function for the "Score" button
+    function showScore() {
+      alert(wickets >= maxWickets 
+        ? `Innings Over: Final Score: ${score} | Wickets: ${wickets}` 
+        : `Current Score: ${score} | Wickets: ${wickets}`);
+    }
+
+    // Assign functions to buttons
+    document.querySelector('#Four').onclick = hitFour;
+    document.querySelector('#Six').onclick = hitSix;
+    document.querySelector('#Wicket').onclick = takeWicket;
+    document.querySelector('#Score').onclick = showScore;
+
+    // Initialize the game summary
+    updateGameSummary();
+  </script>
+</body>
+</html>

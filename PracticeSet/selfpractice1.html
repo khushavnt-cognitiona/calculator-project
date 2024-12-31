@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #click{
+    background-color: blue;
+    color: red;
+    border-radius: 5px;
+  }
+</style>
+<body>
+ 
+
+
+  <button id="click" onclick="add=add+1; document.querySelector('#click').innerText= `your total ammount   ${add}`">Add </button>
+
+  <button id="khushvant" onclick="add=add-2; document.querySelector('#click').innerText= `your total ammount    ${add}`">Sub</button>
+  <script>
+
+    let add=0;
+    let name='pagal';
+    document.querySelector('#click').innerText=`your total ammount is =${add}`;
+
+
+    // <h1 id="khushvant">${add}</h1>
+
+  </script>
+</body>
+</html>
